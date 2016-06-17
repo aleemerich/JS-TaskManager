@@ -12,6 +12,8 @@ Então sentei, passei horas (pra não falar em dias) pra tentar a chegar algo fu
 
 ## Como funciona
 
+Antes de começar, é importante deixar claro que __os código aqui disponibilizados foram retirados de um sistema, então pode haver dependências que ainda estão dentro dos fontes disponibilizados. No script de banco de dados, há informações para ilustrar como se utilizava tais tabelas, mas essas informações são meramente ilustrativas e darão erro se usadas de forma avulsa.__ 
+
 Em resumo, esse projeto é composto de 6 arquivos que fazem o trabalho de Task Manager de uma aplicação. São eles:
 - __index.html__: Ele pode ter qualquer nome que se queria dar e pode ter o layout desejado, desde que ele mantenha a referência a um arquivo chamado "start.js".
 - __start.js__: Este arquivo contém as conigurações iniciais do sistema e responsável pela carga de todos os outros arquivos JS que serão utilizados, garantindo que isso seja feito com máxima integridade que o JavaScript puro pode oferecer. Este arquivo pode ficar hospedados junto com o "index.html" ou em um server onde se encontra as blibliotecas e as aplicações em geral. É importante lembrar que esse arquivo deve ser único para cara aplicação (ou cliente), pois contém as configurações de ambiente particulares de cada aplicação a ser executada.
@@ -32,11 +34,11 @@ Conceitualmente falando, o sistema funciona como um executor de tarefas onde:
 
 Além dos arquivos, o sistema requer um reposítórios para que as lista de ações seja armazenado. Cada ação pode ter N tarefas a serem executadas. Escolhi inicialmente o MySQL como reposítório, contudo este repositório pode ser feito de várias outras formas.
 
-## O que se esperava da biblioteca
+## Objetivo da biblioteca
 
-Todas as ações a serem executadas foram projetadas para estarem em tabelas de banco de dados, inclusive layouts. Essa ideia me pareceu mais acertiva inicialmente, principalmente se eu tivesse a possibilidade de criar uma interface gráfica para lidar com essas ações a serem armazenadas. Com isso, a ideia de versionamento de ações, minificação de HTML e JS, facilidade de backups e deploy seria imensa. Quando pensava em criar interfaces para mobile, isso ficava ainda mais evidente se fosse usado um banco não relacional.
+Ter todas as ações a serem executadas foram projetadas para estarem em tabelas de banco de dados, inclusive layouts. Essa ideia me pareceu mais acertiva inicialmente, principalmente se eu tivesse a possibilidade de criar uma interface gráfica para lidar com essas ações a serem armazenadas. Com isso, eu teria um ganho em versionamento de ações, minificação de HTML e JS, backups e deploy. Quando pensava em criar interfaces para mobile, isso ficava parecia ainda mais evidente se fosse usado em um banco (relacional ou não).
 
-Outro dado interessante é que essa  arquitetura possibilita que se trabalhe, em um mesmo sistema, vários clientes simultâneos, pois foi originalmente pensado para ser utilizado em um produto que poderia atender a demandas de empresas diferentes, no que tange a geotecnoloigas.
+Outro dado interessante é que essa  arquitetura possibilita que se trabalhe, em um mesmo sistema, vários clientes (ambientes, sistemas) simultâneos, pois foi originalmente pensado para ser utilizado em um produto que poderia atender a demandas de empresas diferentes, mas com o mesmo framework.
 
 ## Problemas que encontrei
 
@@ -46,5 +48,9 @@ Outro dado interessante é que essa  arquitetura possibilita que se trabalhe, em
 
 ## Futuro
 
-A ideia de colocar aqui está criação minha é ver se pode ser reaproveitada, refeita, ajustada ou qualquer coisa do gênero para que se torne uma ferramenta útil aos programadores e, principalmente, ajude aos usuários nos momentos em que eles fiquem órfãos em seus browsers. Gostaria de um dia conseguir realmente oferer a possibilidade do usuário criar e ver uma espécie de Task Manager para ajudar a entender demoras em suas ações, abortar ações problemáticas e, principalmente, ajudar aos desenvolvedores nos momentos de problemas ou atendimentos aos seus usuários, além é claro de ser uma ferramenta com um mínimo de "inteligência" para buscar alternativas quando houver quebras no processo padrão ou o usuário ficar "off-line".
+A ideia de colocar aqui está criação minha é repartir conhecimento e ver se o que fiz pode/vale ser reaproveitado, refeito, ajustado ou qualquer coisa do gênero para que se torne uma ferramenta útil aos programadores, além de ajudar aos usuários finais nos momentos em que eles ficam órfãos em seus browsers. 
+
+Gostaria de um dia conseguir realmente oferer a possibilidade do usuário criar e ver uma espécie de Task Manager para ajudar a entender demoras em suas ações, abortar ações problemáticas e, principalmente, ajudar a tornar a vida dos desenvolvedores de fornt-end tando no desenvolvimento quanto nos momentos de problemas ou atendimentos entre eles e seus usuários, além é claro de deixar essa biblioteca uma ferramenta com um mínimo de "inteligência" para buscar alternativas quando houver quebras no processo default como quando o usuário ficar "off-line" ou coisas do gênero.
+
+Espero que aproveitem!
 
