@@ -1,6 +1,6 @@
-# js-taskmanager
+# Projeto JS Task Manager
 
-Task Manager em JS para controle completo de estados no front-end de uma aplicação
+Task Manager em JS para controle completo de estados e execuções no front-end de uma aplicação.
 
 ## Breve introdução
 
@@ -13,12 +13,22 @@ Então sentei, passei horas (pra não falar em dias) pra tentar a chegar algo fu
 ## Como funciona
 
 Em resumo, esse projeto é composto de 6 arquivos que fazem o trabalho de Task Manager de uma aplicação. São eles:
-- __index.html__: Ele pode ter qualquer nome que se queria dar e pode ter o layout desejado, desde que ele mantenha a referência a um arquivo chamado "main.js".
-- __main.js__: Este arquivo contém as conigurações inicias do sistema que será carregado e também é responsável por iniciar a carga de todos os outros arquivos JS que serão utilizados, garantindo que isso seja feito ou que um erro primário seja dado. Este arquivo pode ficar hospedados junto com o "index.html" ou em um server onde se encontra as blibliotecas e as aplicações em geral. É importante lembrar que esse arquivo deve ser único para cara aplicação, pois contém as configurações de ambiente e cargas iniciais.
+- __index.html__: Ele pode ter qualquer nome que se queria dar e pode ter o layout desejado, desde que ele mantenha a referência a um arquivo chamado "start.js".
+- __start.js__: Este arquivo contém as conigurações iniciais do sistema e responsável pela carga de todos os outros arquivos JS que serão utilizados, garantindo que isso seja feito com máxima integridade que o JavaScript puro pode oferecer. Este arquivo pode ficar hospedados junto com o "index.html" ou em um server onde se encontra as blibliotecas e as aplicações em geral. É importante lembrar que esse arquivo deve ser único para cara aplicação (ou cliente), pois contém as configurações de ambiente particulares de cada aplicação a ser executada.
+- __main.js__: Este arquivo insere na fila as primeiras execuções que devem ser feitas, visando inciar o processo de carga inicial do sistema. As ações contidas neste arquivo irão até o ponto em que o site tenha carregado os dados mínimos para funcionar. Neste arquivo forma deixados de propósito alguns exemplos para ilutstrar a estrutura de uma fila dentro desta bibliteoca.
 - __composer.js__: Este é o executor da fila. É ele que tem a finalidade de pegar cada item adicionado na fila e executar a ação desejada, inclusive se esta for a de adicionar mais itens de execução à fila se for o caso.
 - __config.js__: Este arquivo carrega para o nevagador as configurações iniciais informadas pelo "main.js" e outras  configurações cadastradas para aquela aplicação em forma de fila de execução já inseridas no contexto execução via Task Manger. Esse arquivo é a interface com todas as outras blibliotecas no que diz respeito a pegar e definir dados de configuração.
 - __queue.js__: Está é a fila propriamente dita e ela armazena todas as ações que devem ser executadas (desde a requisições AJAX a scripts para cada ocasião). Além de tudo que foi dito, a fila ajuda a executar scripts particulares que acabam sendo usados poucas vezes mas que precisam ser carregados (aumentando o volume da carga).
 - __helper.js__: O arquivo "helper.js" seria apenas uma bilbioteca de funções genéricas a serem usadas para qualquer finalidade, mas não consegui fechar a arquitetura desse modo porque não tive mais tempo pra isso, então essa biblioteca não teve um acabamento adequado e acabou misturando funcionalidades do projeto "JS Task Manager" com funcionalidade particulares de projetos que eu estava usando esse módulo para desenvolver.
+
+Conceitualmente falando, o sistema funciona como um executor de tarefas onde:
+
+1. Há uma tarefa "pai" (script) que pode conter N subtarefas "filhas" (script_datails).
+2. Pode haver correlações entre as tarefas "pai", obrigando o sistema a executar tarefas "pai" antes ou depois de ter que executar aquela terefa "pai" em específico.
+3. Cada subtarefa tem uma ordem de execução, um controle para saber se é uma execução remota ou não, a função que ela precisa executar e seus parâmetros. Basta criar as tabelas contidas no repositório para ver alguns exemplos.
+4. As subtarefas podem ser um código de JacaScript ao invés de uma função.
+5. Nas subtarefas, há "coringas" para que se usem como referências a parâmetros dinâmicos.
+
 
 Além dos arquivos, o sistema requer um reposítórios para que as lista de ações seja armazenado. Cada ação pode ter N tarefas a serem executadas. Escolhi inicialmente o MySQL como reposítório, contudo este repositório pode ser feito de várias outras formas.
 
