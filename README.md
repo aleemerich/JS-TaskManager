@@ -1,6 +1,6 @@
 # Projeto JS Task Manager
 
-Task Manager em JS para controle completo de estados e execuções no front-end de uma aplicação.
+Task Manager em JS para controle completo de estados e execuções no front-end de uma aplicação, usado no projeto [GeoTools-Plataform](https://github.com/aleemerich/GeoTools-Plataform).
 
 ## Breve introdução
 
@@ -8,7 +8,7 @@ Tudo se iniciou com o objetivo de evitar que o usuário ficasse refém de situa�
 
 Diante disso, pensei em também fazer algo que sempre nos deparamos quando fazemos um deploy em clientes e resolvi juntar a essa ideia do Task Manager em JS a possibilidade de você passar apenas um arquivo HTML (que o cliente poderia colocar em qualquer servidor desejado, sem necessariamente ter suporte a nada) e esse arquivo passaria então a carregar tudo que fosse necessário para que o sistema funcionasse (quando digo tudo, é tudo mesmo... Desde CSS e JS, até layouts). 
 
-Então sentei, passei horas (pra não falar em dias) pra tentar a chegar algo funcional ao menos. _O que esponho aqui é uma versão beta mínima da ideia, mas que ainda está longe de ser a desejada_.
+Então sentei, passei horas (pra não falar em dias) pra tentar a chegar algo funcional ao menos. _O que esponho aqui é uma versão beta mínima da ideia, mas que precisa de muita melhoria_.
 
 ## Como funciona
 
