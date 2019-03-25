@@ -12,7 +12,7 @@ Então sentei, passei horas (pra não falar em dias) pra tentar a chegar algo fu
 
 ## Como funciona
 
-Antes de começar, é importante deixar claro que __os código aqui disponibilizados foram retirados de um sistema, então pode haver dependências que ainda estão dentro dos fontes disponibilizados. No script de banco de dados, há informações para ilustrar como se utilizava tais tabelas, mas essas informações são meramente ilustrativas e darão erro se usadas de forma avulsa.__ 
+Antes de começar, é importante deixar claro que __os códigos aqui disponibilizados foram retirados de um sistema, então pode haver dependências que ainda estão dentro dos fontes disponibilizados. No script de banco de dados, há informações para ilustrar como se utilizava tais tabelas, mas essas informações são meramente ilustrativas e darão erro se usadas de forma avulsa.__ 
 
 Em resumo, esse projeto é composto de 6 arquivos que fazem o trabalho de Task Manager de uma aplicação. São eles:
 - __index.html__: Ele pode ter qualquer nome que se queria dar e pode ter o layout desejado, desde que ele mantenha a referência a um arquivo chamado "start.js".
